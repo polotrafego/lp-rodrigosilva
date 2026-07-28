@@ -17,18 +17,17 @@ lp-rodrigosilva/
 │  ├─ fonts/             # Articulat CF (corpo) + Crimson Pro (títulos, fallback)
 │  └─ img/               # fotos, logos Polo
 ├─ server.js             # servidor estático só para preview LOCAL (não vai ao deploy)
-├─ vercel.json           # config de deploy estático (clean URLs + cache)
-├─ package.json          # scripts de dev
+├─ vercel.json           # config de deploy estático (site sem build)
 ├─ .gitignore
 └─ .vercelignore
 ```
 
 ## 💻 Rodar localmente
 
-Requer Node.js instalado.
+Com Node.js instalado, na pasta do projeto:
 
 ```bash
-npm run dev
+node server.js
 ```
 
 Depois acesse `http://localhost:5173`. (Alternativa sem Node: abrir o `index.html` direto no navegador.)
