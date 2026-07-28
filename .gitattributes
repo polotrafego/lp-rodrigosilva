@@ -1,0 +1,11 @@
+# Normaliza quebras de linha (evita ruído entre Windows/Vercel)
+* text=auto eol=lf
+
+# Arquivos binários — não normalizar
+*.otf   binary
+*.ttf   binary
+*.woff  binary
+*.woff2 binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary

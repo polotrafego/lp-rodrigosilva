@@ -1,0 +1,3 @@
+# Não enviar ao deploy da Vercel (é um site 100% estático)
+server.js
+README.md
