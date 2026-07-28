@@ -142,11 +142,12 @@ em,.italic{font-family:var(--font-display);font-style:italic;font-weight:500}
 @media (prefers-reduced-motion:reduce){.btn-breathe .icon-circle{animation:none;transform:none}}
 
 /* ---- Botão com "beam" (borda giratória) — pill navy + varredura dourada ---- */
-.beam{position:relative;display:inline-flex;padding:1.6px;overflow:hidden;border-radius:999px}
-.beam::before{content:"";position:absolute;inset:-60%;
-  background:conic-gradient(from 0deg,transparent 0 72%,var(--gold) 84%,var(--cream-on-dark) 90%,transparent 96%);
-  animation:spin 3s linear infinite}
-.btn.beam-inner{position:relative;border-radius:999px;background:var(--navy)}
+.beam{position:relative;display:inline-flex;padding:2px;overflow:hidden;border-radius:999px;background:var(--navy);isolation:isolate}
+.beam::before{content:"";position:absolute;inset:-60%;z-index:0;
+  background:conic-gradient(from 0deg,transparent 0 66%,var(--gold-soft) 78%,#fff 85%,var(--gold) 90%,transparent 97%);
+  animation:spin 3.2s linear infinite}
+.btn.beam-inner{position:relative;z-index:1;border-radius:999px;background:var(--navy)}
+.btn.beam-inner:hover{background:var(--navy-deep)}
 .btn.beam-inner .label{color:#fff}
 .btn.beam-inner:hover{transform:none}
 @keyframes spin{to{transform:rotate(1turn)}}
@@ -507,11 +508,12 @@ footer{background:var(--dark);padding:64px 0 32px;margin-top:0}
 .reveal-zone{overflow:hidden;position:relative;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
   mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.reveal-track{display:flex;gap:12px;width:max-content;animation:reveal-scroll 6s linear infinite}
+.reveal-track{display:flex;align-items:center;gap:56px;width:max-content;animation:reveal-scroll 26s linear infinite}
 .reveal-zone:hover .reveal-track{animation-play-state:paused}
 @keyframes reveal-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.reveal-track{animation:none}}
-.logo-item{height:56px;width:150px;flex-shrink:0;border-radius:12px}
+.logo-item{height:40px;width:auto;flex-shrink:0;opacity:.55;transition:opacity .25s}
+.logo-item:hover{opacity:1}
 .logo-item.ph{background:linear-gradient(180deg,var(--paper-alt),#fff);border:1px dashed var(--line-2);position:relative}
 .logo-item.ph::after{content:"LOGO";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.18em;color:var(--line-2);font-weight:800}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
