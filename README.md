@@ -7,7 +7,7 @@ Site **100% estático** (HTML + CSS + JS puro, sem build), pronto para deploy na
 ## 📁 Estrutura
 
 ```
-rodrigo-silva-lp/
+lp-rodrigosilva/
 ├─ index.html            # página única (a LP)
 ├─ css/
 │  └─ styles.css         # design system + estilos
@@ -42,7 +42,7 @@ git init
 git add .
 git commit -m "feat: landing page Rodrigo Silva"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/rodrigo-silva-lp.git
+git remote add origin https://github.com/SEU-USUARIO/lp-rodrigosilva.git
 git push -u origin main
 ```
 
